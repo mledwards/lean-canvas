@@ -1,0 +1,66 @@
+<div class="container">
+  <div class="box col-2 row-4">
+    <p>Customer Relationships</p>
+    <textarea data-store="customer-relationships" name="" placeholder="Type here"></textarea>
+  </div>
+  <div class="box box-main col-2 row-5">
+    <p>Customer Segments</p>
+    <textarea data-store="customer-segments" name="" placeholder="Type here"></textarea>
+  </div>
+  <div class="box box-main col-2 row-5">
+    <p>Value Proposition</p>
+    <textarea data-store="value-proposition" name="" placeholder="Type here"></textarea>
+  </div>
+  <div class="box box-main col-2 row-5">
+    <p>Alternatives</p>
+    <textarea data-store="alternatives" name="" placeholder="Type here"></textarea>
+  </div>
+  <div class="box col-2 row-4">
+    <p>Key Activities</p>
+    <textarea data-store="key-activities" name="" placeholder="Type here"></textarea>
+  </div>
+
+
+  <div class="box col-2 row-3">
+    <p>Channel</p>
+    <textarea data-store="channel" name="" placeholder="Type here"></textarea>
+  </div>
+  <div class="box col-2 row-3">
+    <p>Key Partners</p>
+    <textarea data-store="key-partners" name="" placeholder="Type here"></textarea>
+  </div>
+  <div class="box box-main col-3 row-2">
+    <p>Revenue Model</p>
+    <textarea data-store="revenue-model" name="" placeholder="Type here"></textarea>
+  </div>
+  <div class="box box-main col-3 row-2">
+    <p>Cost Model</p>
+    <textarea data-store="cost-model" name="" placeholder="Type here"></textarea>
+  </div>
+  
+
+  <div class="box col-5 row-3">
+    <p>Market Size / Market Opportunity</p>
+    <textarea data-store="market-size-market-opportunity" name="" placeholder="Type here"></textarea>
+  </div>
+  <div class="box col-5 row-3">
+    <p>Key Resources</p>
+    <textarea data-store="key-resources" name="" placeholder="Type here"></textarea>
+  </div>
+</div>
+
+<script>
+  let fields = document.querySelectorAll('[data-store]');
+
+  fields.forEach(function(field) {
+    let attribute = field.getAttribute('data-store');
+
+    // Populate all fields
+    field.value = localStorage.getItem(attribute);
+
+    // Set local storage on blur of field
+    field.addEventListener('blur', function() {
+      localStorage.setItem(attribute, field.value);
+    })
+  });
+</script>

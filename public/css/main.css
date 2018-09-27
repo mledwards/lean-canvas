@@ -1,0 +1,84 @@
+body {
+  padding-top: 0;
+  background-color: rgba(173, 106, 50, 0.5);
+  color: #333;
+  padding: 0;
+  position: relative;
+}
+
+.box {
+  border: 1px solid black;
+  position: relative;
+  margin: 0.5rem;
+  height: 45vh;
+  background-color: #fff;
+}
+
+.box-main {
+  border-width: 5px;
+}
+
+.box p {
+  font-family: 'Teko';
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin-top: 0.3rem;
+  border-bottom: 1px solid black;
+}
+
+textarea {
+  background: transparent;
+  display: block;
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-height: 0;
+  min-width: 0;
+  width: 100%;
+  border: 0;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+}
+
+@media screen and (min-width: 992px) {
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(10, 10vw);
+    grid-template-rows: repeat(10, 10vh);
+  }
+
+  .box {
+    height: auto;
+  }
+
+  .row-2 {
+    grid-row-start: span 2;
+  }
+
+  .row-3 {
+    grid-row-start: span 3;
+  }
+
+  .row-4 {
+    grid-row-start: span 4;
+  }
+
+  .row-5 {
+    grid-row-start: span 5;
+  }
+
+  .col-2 {
+    grid-column: span 2;
+  }
+
+  .col-3 {
+    grid-column: span 3;
+  }
+
+  .col-5 {
+    grid-column: span 5;
+  }
+}
