@@ -14,6 +14,10 @@ body {
   background-color: #fff;
 }
 
+.box:nth-child(even) {
+  page-break-after: always;
+}
+
 .box-main {
   border-width: 5px;
 }
