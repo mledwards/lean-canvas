@@ -55,8 +55,8 @@
   fields.forEach(function(field) {
     let attribute = field.getAttribute('data-store');
 
-    // Populate all fields
-    field.value = localStorage.getItem(attribute);
+    // Populate all fields with local storage
+    field.value = localStorage.getItem(attribute) || '';
 
     // Set local storage on blur of field
     field.addEventListener('blur', function() {
